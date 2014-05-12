@@ -27,11 +27,37 @@
 
 # 2. Initial Solution
 
+# def total(array)
+# 	total = 0
+# 	for i in array
+# 		total += i
+# 	end
+# 	total
+# end
+
+# def sentence_maker(array)
+# 	array[0].capitalize!
+# 	return array.join(' ') +'.'
+	
+# end
+
 
 
 
 # 3. Refactored Solution
 
+def total(array)
+	array.inject{|sum,x| sum + x }
+end
+
+def sentence_maker(array)
+	array[0].capitalize!
+	return array.join(' ') +'.'
+end
 
 
 # 4. Reflection 
+
+# First I tried the tests and saw what it wanted me to code. I then Pseudocoded the solutions, and then 
+# turned that into the first solution. After looking on stackoverflow for a more efficient
+# and less wordy solution to the sum function I updated with a Refactored solution. 
