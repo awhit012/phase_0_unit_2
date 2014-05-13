@@ -4,16 +4,25 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 # 1. Pseudocode
 
-# What is the input?
-# What is the output? (i.e. What should the code return?)
-# What are the steps needed to solve the problem?
+# # What is the input?
+# An Array
+# # What is the output? (i.e. What should the code return?)
+# the mode of the array
+# # What are the steps needed to solve the problem?
+# iterate through array and count instances of numbers or strings
+# return item with largest count
+# else return none
 
 
 # 2. Initial Solution
+def mode(array)
+	mode = []
+	mode = array.inject
+end
 
 
 
