@@ -43,6 +43,20 @@ end
 i_want_pets = ["I", "want", 3, "pets", "but", "I", "only", "have", 2, ":(." ]
 my_array_modification_method(i_want_pets, 1) 
 
+#Input: hash, number of years
+# Output: new hash with new ages
+#my_hash_modification_method takes input of the old hash and the new number of years
+#  FOR each pet in the hash
+# 		add number of years to age
+			
+#  END FOR
+#END FUNCTION
+
+#INITIAL SOLUTION: 
+
+def my_hash_modification_method(my_family_pets_ages, years_gone_by)
+	my_family_pets_ages.each { |pets, ages| my_family_pets_ages[pets] = v + years_gone_by }
+end
 
 
 
