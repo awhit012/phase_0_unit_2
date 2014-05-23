@@ -55,6 +55,10 @@ STATE_DATA = {  "Alabama" => {population_density: 94.65, population: 4822023, re
                 "Wyoming" => {population_density: 5.851, population: 576412, region: 8, regional_spread: 6}
               }
               
+
+              #This hash has hashes in it! There are two syntaxes used, one is 
+              #{key => value}. The value is another hash 
+              #in this case, that uses {key: value, key: value}
               
               
               
