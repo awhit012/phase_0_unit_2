@@ -54,6 +54,7 @@ puts get_row(boggle_board, 0) == ["b", "r", "a", "e"]
 #Easy! Fun way to learn about nested arrays. what about a column? OOh! Thants next!
 
 
+<<<<<<< HEAD
 #-------------------------------------------------------------------------------
 
 # Part 3: Now write a method that takes a column number and returns all the elements in the column.
@@ -78,3 +79,5 @@ puts get_column(boggle_board, 1) === ["r", "o", "c", "a"]
 #I needed a new array that didn't exist from other arrays, so I thought .map
 #would be the way to go. A quick google search and some play in the irb 
 #confirmed this as a good solution.  
+=======
+>>>>>>> upstream/master

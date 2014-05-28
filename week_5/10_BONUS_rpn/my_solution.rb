@@ -5,9 +5,10 @@
 
 # 2. Pseudocode
 
-# Input:
-# Output:
+# Input: reverse polish notation
+# Output: the answer
 # Steps:
+# 
 
 
 # 3. Initial Solution
