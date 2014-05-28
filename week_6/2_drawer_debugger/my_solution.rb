@@ -1,62 +1,67 @@
 # U2.W6: Drawer Debugger
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 
 # 2. Original Code
 
 class Drawer
 
-attr_reader :contents
+	attr_reader :contents
 
 # Are there any more methods needed in this class?
 
-def initialize
-@contents = []
-@open = true
+	def initialize
+		@contents = []
+		@open = true
+	end
+
+	def open
+		@open = true
+	end
+
+	def close
+		@open = false
+	end 
+	def add_item(item)
+		@contents << item
+	end
+
+	def remove_item(item = @contents.pop) #pop refers to last item in content
+		@contents.delete(item)
+	end
+
+	def dump  # what should this method return?
+		@contents = []
+		puts "Your drawer is empty."
+	end
+
+	def view_contents
+		puts "The drawer contains:"
+		@contents.each {|silverware| puts "- " + silverware.type }
+	end
 end
-
-def open
-@open = true
-end
-
-def close
-@open = false
-end 
-
-def add_item
-@contents << item
-end
-
-def remove_item(item = @contents.pop) #what is `#pop` doing?
-@contents.delete(item)
-end
-
-def dump  # what should this method return?
-puts "Your drawer is empty."
-end
-
-def view_contents
-puts "The drawer contains:"
-@contents.each {|silverware| puts "- " + silverware.type }
-end
-
 
 class Silverware
-attr_reader :type
+	attr_reader :type
 
 # Are there any more methods needed in this class?
 
-def initialize(type, clean = true)
-@type = type
-@clean = clean
-end
+	def initialize(type, clean = true)
+		@type = type
+		@clean = clean
+	end
 
-def eat
-puts "eating with the #{type}"
-@clean = false
-end
+	def eat
+		puts "eating with the #{type}"
+		@clean = false
+	end
+
+	def clean_silverware
+		puts "cleaning the #{type}"
+		@clean = true
+	end
 
 end
 
@@ -94,9 +99,26 @@ fork.eat
 
 # DRIVER TESTS GO BELOW THIS LINE
 
+def assert
+  raise "Assertion failed!" unless yield
+end
+
+
+assert {silverware_drawer.dump == [] }
+
+puts spork.drop == false
+puts spork.clean_silverware == true
+puts spork.eat == false
+puts spork.toss == true
+
 
 
 
 
 
 # 5. Reflection 
+
+# I don't get this at all, but I will have to come back to it. 
+#Ok, what don't I get. What am I supposed to do? I fixed the obvious errors. I keep getting a NoMethod
+#error that I don't get. I clearly defined that method.... Also I don't know atm if my assertion is 
+#even working or how to tell. Everything is OK, I just have to come back. YAY!
