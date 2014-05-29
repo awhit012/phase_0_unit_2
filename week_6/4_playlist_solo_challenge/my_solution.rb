@@ -5,16 +5,128 @@
 
 
 # Pseudocode
+# CREATE class Song
+		# SET ATTR_READER :title
+		# SET ATTR_READER :artist
+
+		# DEFINE method initialize with two ARGUMENTS title, artist
+			# SET INSTANCE VARIABLE @title = title
+			# SET INSTANCE VARIABLE @artist = artist
+
+		# DEFINE method play with NO ARGUMENTS
+			# print string "Playing [song title]."
+
+	# CREATE class Playlist
+
+		# DEFINE method initialize with single ARGUMENT *songs
+			# SET INSTANCE VARIABLE @songs = songs
+
+		# DEFINE method add with single ARGUMENT *tracks
+			# PUSH EACH track to array @songs
+
+		# DEFINE method num_of_tracks with NO ARGUMENTS
+			# RETURN number of elements in array @songs
+
+		# DEFINE method REMOVE with single ARGUMENT *tracks
+			# DELETE each track from array @songs
+
+		# DEFINE method includes? with single ARGUMENT track
+			# check if array @songs INCLUDE? track
+
+		# DEFINE method play_all with NO ARGUMENTS
+			# CALL method play for EACH track in array @songs
+
+		# DEFINE method display with NO ARGUMENTS
+			# PRINT EACH track in array @songs
 
 
 
 # Initial Solution
+# class Song
+
+# 	attr_reader :artist 
+# 	attr_reader :title
+
+# 	def initialize(title, artist)
+# 		@title = title
+# 		@artist = artist
+# 	end
+
+# 	def play
+# 		puts "playing" + title 
+# 	end
+# end
+
+
+# class Playlist 
+
+# 	def initialize(*tracks)
+# 		@playlist = tracks 
+# 	end
+
+# 	def add(*tracks)
+# 		tracks.each { |track| @playlist << track }
+# 	end
+
+# 	def num_of_tracks
+# 		@playlist.length
+# 	end
+
+# 	def remove(*tracks)
+# 	end
+
+# 	def includes?(track)
+# 		@playlist.include?(track)
+# 	end
+
+# 	def play_all
+# 	end
+# end
 
 
 
 
 # Refactored Solution
+class Song
 
+	attr_reader :artist 
+	attr_reader :title
+
+	def initialize(title, artist)
+		@title = title
+		@artist = artist
+	end
+
+	def play
+		puts "playing" + title 
+	end
+end
+
+
+class Playlist 
+
+	def initialize(*tracks)
+		@playlist = tracks 
+	end
+
+	def add(*tracks)
+		tracks.each { |track| @playlist << track }
+	end
+
+	def num_of_tracks
+		@playlist.length
+	end
+
+	def remove(*tracks)
+	end
+
+	def includes?(track)
+		@playlist.include?(track)
+	end
+
+	def play_all
+	end
+end
 
 
 
